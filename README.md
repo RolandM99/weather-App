@@ -22,7 +22,7 @@ This React capstone project is about building a mobile web application to check 
 
 ## Live Demo
 
-[Live link]()
+[Live link](In progress)
 
 # Getting Started with Create React App
 
