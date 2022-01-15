@@ -4,11 +4,11 @@ This React capstone project is about building a mobile web application to check 
 
 # Screenshots: 
 
-![screenshot](../air-pollution-tracker/src/assets/images/mobileV.png)
+![screenshot](./mobileV.png)
 
 #
 
-![screenshot](../air-pollution-tracker/src/assets/images/desktop.png)
+![screenshot](./desktop.png)
 
 ## Built With
 
@@ -18,7 +18,7 @@ This React capstone project is about building a mobile web application to check 
 
 ## Live video
 
-[live presentation]()
+[live presentation](https://www.loom.com/share/3f67f0b928794ae7b78e3eb1717221e4)
 
 ## Live Demo
 
