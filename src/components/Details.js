@@ -1,75 +1,112 @@
 /* eslint-disable react/prop-types */ // TODO: upgrade to latest eslint tooling
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { IoIosPin } from 'react-icons/io';
+import { useSelector, useDispatch } from 'react-redux';
 import {
-  WiDaySunny, WiDayThunderstorm, WiDaySnowWind, WiDayRain, WiCloudy, WiDayRainMix,
-  WiDayHaze, WiDayFog, WiSmoke, WiTornado, WiCloudyGusts,
+  WiDaySunny,
+  WiDayThunderstorm,
+  WiDaySnowWind,
+  WiDayRain,
+  WiCloudy,
+  WiDayRainMix,
+  WiDayHaze,
+  WiDayFog,
+  WiSmoke,
+  WiTornado,
+  WiCloudyGusts,
 } from 'react-icons/wi';
+import { CLEAR_DATA } from '../redux/Home/reducers';
 
-const Details = () => {
-  const city = useSelector((state) => state.dataReducer);
+const Details = ({ history }) => {
+  const city = useSelector((state) => state.dataReducer.details);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    console.log(history);
+    return () => {
+      dispatch({
+        type: CLEAR_DATA,
+      });
+    };
+  }, []);
   const icon = () => {
-    switch (city.main) {
+    switch (city.weather[0].main) {
       case 'Clear':
-        return (<WiDaySunny />);
+        return <WiDaySunny />;
       case 'Thunderstorm':
-        return (<WiDayThunderstorm />);
+        return <WiDayThunderstorm />;
       case 'Snow':
-        return (<WiDaySnowWind />);
+        return <WiDaySnowWind />;
       case 'Rain':
-        return (<WiDayRain />);
+        return <WiDayRain />;
       case 'Clouds':
-        return (<WiCloudy />);
+        return <WiCloudy />;
       case 'Drizzle':
-        return (<WiDayRainMix />);
+        return <WiDayRainMix />;
       case 'Mist':
-        return (<WiDayFog />);
+        return <WiDayFog />;
       case 'Smoke':
-        return (<WiSmoke />);
+        return <WiSmoke />;
       case 'Fog':
-        return (<WiDayFog />);
+        return <WiDayFog />;
       case 'Haze':
-        return (<WiDayHaze />);
+        return <WiDayHaze />;
       case 'Dust':
-        return (<WiDayRainMix />);
+        return <WiDayRainMix />;
       case 'Sand':
-        return (<WiCloudyGusts />);
+        return <WiCloudyGusts />;
       case 'Ash':
-        return (<WiCloudyGusts />);
+        return <WiCloudyGusts />;
       case 'Squall':
-        return (<WiTornado />);
+        return <WiTornado />;
       case 'Tornado':
-        return (<WiTornado />);
+        return <WiTornado />;
       default:
-        return (<div className="none" />);
+        return <div className="none" />;
     }
   };
   return (
-    <div className="weather">
-      <div className="weather-content">
-        <h1 className="name">
-          {city.name}
-        </h1>
-        <div className="icon">{icon()}</div>
-        <h2 className="description">{city.description}</h2>
-        <h3 className="temp">
-          Temp :
-          {city.temp}
-          {'\u00b0'}
-          F
-        </h3>
-        <div className="others">
-          <span className="humidity">
-            Humidity :
-            {city.humidity}
-          </span>
-          <span className="pressure">
-            Pressure :
-            {city.pressure}
-          </span>
+    <>
+      {Object.keys(city).length === 0 ? (
+        <div className="text-center">
+          <p>loading...</p>
         </div>
-      </div>
-    </div>
+      ) : (
+        <div className="weather">
+          <div className="weather-content">
+            <h1 className="name">
+              <IoIosPin />
+              {city.name}
+            </h1>
+            <div className="icon">{icon()}</div>
+            <h2 className="description">{city.weather[0].description}</h2>
+            <h3 className="temp">
+              Temp :
+              {city.weather[0].temp}
+              {'\u00b0'}
+              F
+            </h3>
+            <div className="others">
+              <span className="humidity">
+                Humidity :
+                {city.weather[0].humidity}
+              </span>
+              <span className="pressure">
+                Pressure :
+                {city.weather[0].pressure}
+              </span>
+              <span className="speed">
+                Speed :
+                {city.weather[0].speed}
+              </span>
+              <span className="deg">
+                Deg :
+                {city.weather[0].deg}
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

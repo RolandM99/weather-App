@@ -1,7 +1,8 @@
 // actions
 const GET_DATA = 'GET_DATA';
+export const CLEAR_DATA = 'CLEAR_DATA';
 const initialState = {
-  details: [],
+  details: {},
 };
 
 // create action creators return object
@@ -32,6 +33,8 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_DATA:
       return { ...state, details: action.payload };
+    case CLEAR_DATA:
+      return { ...state, details: {} };
     default:
       return state;
   }

@@ -1,4 +1,4 @@
-import logger from 'redux-logger';
+// import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { applyMiddleware, combineReducers, createStore } from 'redux';
@@ -11,7 +11,7 @@ const reducer = combineReducers(
 );
 const store = createStore(
   reducer, composeWithDevTools(
-    applyMiddleware(thunk, logger),
+    applyMiddleware(thunk),
   ),
 );
 
