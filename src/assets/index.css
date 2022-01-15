@@ -91,7 +91,7 @@ svg {
 }
 
 .weather {
-  background: linear-gradient(#314c58d8 0%, #87ceefad 100%), url('./images/weatherback.jpg');
+  background: linear-gradient(#1a2e36d8 0%, #386980ad 100%), url('./images/weatherback.jpg');
   background-repeat: no-repeat;
   margin-top: -80px;
   padding-top: 50px;
@@ -99,11 +99,25 @@ svg {
 }
 
 .weather-content {
-  margin-top: 300px;
+  color: white;
+  text-align: center;
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#Layer_1 {
+  font-size: 50px;
 }
 
 .container-home {
-  background: linear-gradient(#314c58 0%, #87ceef 100%);
+  background: linear-gradient(#2d4a57 0%, #42778f 100%);
+}
+
+.container {
+  height: 2100px;
 }
 
 #input-data {
@@ -134,4 +148,9 @@ svg {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+}
+
+.others {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
 }
