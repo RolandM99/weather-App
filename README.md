@@ -27,7 +27,7 @@ This React capstone project is about building a mobile web application to check 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-To have the local version of this project in your local PC, first clone the project with: `git clone` https://github.com/RolandM99/SpaceTraveller.git,
+To have the local version of this project in your local PC, first clone the project with: `git clone` https://github.com/RolandM99/weather-App.git,
 then run the command `npm install` to update all packages locally.
 
 ## Available Scripts
