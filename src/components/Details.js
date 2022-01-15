@@ -17,16 +17,13 @@ import {
 } from 'react-icons/wi';
 import { CLEAR_DATA } from '../redux/Home/reducers';
 
-const Details = ({ history }) => {
+const Details = () => {
   const city = useSelector((state) => state.dataReducer.details);
   const dispatch = useDispatch();
   useEffect(() => {
-    console.log(history);
-    return () => {
-      dispatch({
-        type: CLEAR_DATA,
-      });
-    };
+    dispatch({
+      type: CLEAR_DATA,
+    });
   }, []);
   const icon = () => {
     switch (city.weather[0].main) {
