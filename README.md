@@ -22,7 +22,7 @@ This React capstone project is about building a mobile web application to check 
 
 ## Live Demo
 
-[In progress]()
+[live link](https://drcweather-app.netlify.app/)
 
 # Getting Started with Create React App
 
