@@ -20,6 +20,8 @@ This React capstone project is about building a mobile web application to check 
 
 [live presentation](https://www.loom.com/share/3f67f0b928794ae7b78e3eb1717221e4)
 
+[live presentation(Code Highlight)](https://www.loom.com/share/d0eca547ef994e18bbe2fc935cce5eba)
+
 ## Live Demo
 
 [live link](https://drcweather-app.netlify.app/)
@@ -69,6 +71,10 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
+
+## Acknowlegment
+
+I thank [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) who is the author of the original design which inspired me.
 
 ## Show your support
 
