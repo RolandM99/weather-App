@@ -15,4 +15,15 @@ describe('HomePage component test', () => {
       .toJSON();
     expect(app).toMatchSnapshot();
   });
+
+  it('Renders all path of the web App', () => {
+    const path = renderer
+      .create(
+        <Provider store={store}>
+          <Home />
+        </Provider>,
+      )
+      .toJSON();
+    expect(path).toMatchSnapshot();
+  });
 });
