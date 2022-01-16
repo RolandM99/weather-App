@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */ // TODO: upgrade to latest eslint tooling
 import React, { useEffect } from 'react';
 import { IoIosPin } from 'react-icons/io';
 import { useSelector, useDispatch } from 'react-redux';
