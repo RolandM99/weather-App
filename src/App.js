@@ -1,9 +1,10 @@
-function App() {
-  return (
-    <div className="App">
-      <h1>Air pollution Tracker</h1>
-    </div>
-  );
-}
+import React from 'react';
+import Home from './components/HomePage';
+
+const App = () => (
+  <div>
+    <Home />
+  </div>
+);
 
 export default App;
