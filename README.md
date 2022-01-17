@@ -1,6 +1,6 @@
 # Weather App
 
-This React capstone project is about building a mobile web application to check a list of metrics (numeric values) that you will create making use of React and Redux. For our case, we selected Open weather API that provides numeric data about a weather then we built the webapp around it.
+This React capstone project is about building a mobile web application to check a list of metrics (numeric values) that you will create making use of React and Redux. For our case, we selected Open weather API that provides numeric data about weather then we built the mobile web app around it.
 
 # Screenshots: 
 
