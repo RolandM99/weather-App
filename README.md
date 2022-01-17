@@ -24,7 +24,9 @@ This React capstone project is about building a mobile web application to check 
 
 ## Live Demo
 
-[live link](https://drcweather-app.netlify.app/)
+[netlify deployment](https://drcweather-app.netlify.app/)
+
+[heroku deployment](https://drcweather-app.herokuapp.com/)
 
 # Getting Started with Create React App
 
